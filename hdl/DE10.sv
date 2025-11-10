@@ -4,5 +4,14 @@ module DE10 (
 	output [9:0] LEDR
 );
 
+	wire [31:0] solution;
+	assign LEDR = solution;
+	generator gen (
+		.clk (CLOCK_50),
+		.start (KEY[0]),
+		.reset (KEY[3]),
+		.finish (),
+		.solution (solution)
+	);
 	
 endmodule
