@@ -1,7 +1,7 @@
 module ram # (
 	parameter ADDR_WIDTH = 12,
 	parameter DATA_WIDTH = 32,
-	parameter DEPTH = 2048
+	parameter DEPTH = 64
 	) ( 	
 	input wire clk,
 	input wire [ADDR_WIDTH-1:0] addr,
