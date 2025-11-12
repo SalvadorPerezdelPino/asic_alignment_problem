@@ -27,14 +27,14 @@ module tb_asic();
 	initial begin
 		cycles = 0;
 		
-		@(posedge clk);
-		
 		while (done !== 1) begin
 			@(posedge clk);
 			cycles = cycles + 1;
 		end
+
 		
 		$display("Cycles: %d", cycles);
+		$display("Solucion: %d", solution);
 		$stop();
 	end
 
